@@ -48,13 +48,13 @@ $ npm run start:prod
 ## Test
 
 ```bash
-# unit tests
+# unit tests (Unit Tests present and used in the repo)
 $ npm run test
 
-# e2e tests
+# e2e tests (NOT used in the repo)
 $ npm run test:e2e
 
-# test coverage
+# test coverage (NOT used in the repo)
 $ npm run test:cov
 ```
 # Testing Resources
