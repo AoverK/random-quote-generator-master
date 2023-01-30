@@ -8,6 +8,7 @@ const quoteArray = [
   new Quote(1, 'I like beets', 'Dwight'),
   new Quote(2, 'I love cats', 'Angela'),
 ];
+const quoteIdTest = 0;
 
 describe('QuotesController Tests', () => {
   let controller: QuotesController;
@@ -38,7 +39,7 @@ describe('QuotesController Tests', () => {
 
   it('QuotesController findAll: should return an array of quotes', async () => {
     expect(await controller.findAll()).toContainEqual({
-      quote_id: '1',
+      quote_id: 1,
       quote: 'I like beets',
       character: 'Dwight',
     });

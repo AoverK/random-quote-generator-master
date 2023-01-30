@@ -60,20 +60,24 @@ $ npm run test:cov
 # Testing Resources
 
 [NestJS Testing](https://github.com/jmcdo29/testing-nestjs)
+
 [Jest API Docs](https://jestjs.io/docs/api)
+
 [Testing NestJS Github Repo](https://github.com/jmcdo29/testing-nestjs)
 
 # Postman
 Files for external testing of the API using Postman
 
 **Collection File**
+
 `RandomQuoteGenerator.postman_collection.json`
 
 **Environment File**
-RandomQuoteGenerator.postman_environment.json
+
+`RandomQuoteGenerator.postman_environment.json`
 
 ## Features Added
-1. Swagger API at /api
+1. Swagger API Docs at `/api`
 2. Postman Collection for External Testing
 3. Docker containerization script
 
@@ -81,13 +85,15 @@ RandomQuoteGenerator.postman_environment.json
 
 ### Environments
 **Development**
+
 This is a 3 stage build process:
-1. Use `development -t random-quote-generator-master` to build 
+1. Build using `development -t random-quote-generator-master`
 2. Spin up you container
 `docker run -p80:3000 random-quote-generator-master`
 
 
 **Production**
+
 This is a 3 stage build process:
 1. Build using `docker build -t random-quote-generator-master` 
 2. Then run second stage of build process using `docker production -t random-quote-generator-master`

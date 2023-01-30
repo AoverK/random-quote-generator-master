@@ -4,8 +4,8 @@ import { Quote } from '../quotes/entities/quote.entity';
 import { QuotesService } from './quotes.service';
 
 const quoteArray = [
-  new Quote('1', 'I like beets', 'Dwight'),
-  new Quote('2', 'I love cats', 'Angela'),
+  new Quote(1, 'I like beets', 'Dwight'),
+  new Quote(2, 'I love cats', 'Angela'),
 ];
 
 describe('QuotesService', () => {
@@ -19,14 +19,14 @@ describe('QuotesService', () => {
           provide: getRepositoryToken(Quote),
           useValue: {
             findAll: jest.fn().mockResolvedValue(quoteArray),
-            findOne: jest.fn().mockReturnValue((quote_id: string) => [
+            findOne: jest.fn().mockReturnValue((quote_id: number) => [
               {
                 quote_id: quote_id,
                 quote: 'Hello',
                 character: 'Jim',
               },
             ]),
-            findOneRandom: jest.fn().mockReturnValue((quote_id: string) => [
+            findOneRandom: jest.fn().mockReturnValue((quote_id: number) => [
               {
                 quote_id: quote_id,
                 quote: 'Hello',
